@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: abhidheyadvisors/abhidheya-website
+  name: git-gateway
   branch: main
-  auth_type: pkce
 
 media_folder: "images"
 public_folder: "/images"
