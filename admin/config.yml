@@ -4,52 +4,109 @@ backend:
   branch: main
   auth_type: pkce
   app_id: Ov23liGtwb1OlaKt8Keo
-media_folder: "images"
-public_folder: "/images"
+
+locale: en
+media_folder: images
+public_folder: /images
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "_data/projects"
+  - name: projects
+    label: Projects
+    folder: _data/projects
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Project Name", name: "title", widget: "string"}
-      - {label: "Client", name: "client", widget: "string"}
-      - {label: "Client Type", name: "client_type", widget: "select", options: ["Government", "NGO / Org", "Corporate", "MSME"]}
-      - {label: "Service Line", name: "service", widget: "select", options: ["Policy, Strategy & Programme Advisory", "Programme Management & Technical Support", "Funding Strategy & Proposal Design", "Research, Monitoring & Evaluation", "Digital Governance & Transformation", "Strategic Communications, Branding & Marketing", "Business Growth & Enterprise Management", "Multiple"]}
-      - {label: "Status", name: "status", widget: "select", options: ["Active", "Completed", "Pipeline"]}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Contract Note", name: "contract", widget: "string", required: false}
-      - {label: "Project Image", name: "image", widget: "image", required: false}
-      - {label: "Featured on Homepage", name: "featured", widget: "boolean", default: false}
-      - {label: "Display Order", name: "order", widget: "number", default: 99}
+      - label: Project Name
+        name: title
+        widget: string
+      - label: Client
+        name: client
+        widget: string
+      - label: Client Type
+        name: client_type
+        widget: select
+        options: [Government, NGO / Org, Corporate, MSME]
+      - label: Service Line
+        name: service
+        widget: select
+        options:
+          - Policy, Strategy & Programme Advisory
+          - Programme Management & Technical Support
+          - Funding Strategy & Proposal Design
+          - Research, Monitoring & Evaluation
+          - Digital Governance & Transformation
+          - Strategic Communications, Branding & Marketing
+          - Business Growth & Enterprise Management
+          - Multiple
+      - label: Status
+        name: status
+        widget: select
+        options: [Active, Completed, Pipeline]
+      - label: Description
+        name: description
+        widget: text
+      - label: Contract Note
+        name: contract
+        widget: string
+        required: false
+      - label: Featured on Homepage
+        name: featured
+        widget: boolean
+        default: false
 
-  - name: "insights"
-    label: "Insights"
-    folder: "_data/insights"
+  - name: insights
+    label: Insights
+    folder: _data/insights
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Tag / Category", name: "tag", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Author", name: "author", widget: "string", default: "Vinit Chakwal"}
-      - {label: "Read Time", name: "read_time", widget: "string", default: "5 min read"}
-      - {label: "Article Body", name: "body", widget: "markdown"}
-      - {label: "Article Image", name: "image", widget: "image", required: false}
-      - {label: "Published", name: "published", widget: "boolean", default: true}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - label: Title
+        name: title
+        widget: string
+      - label: Tag / Category
+        name: tag
+        widget: string
+      - label: Excerpt
+        name: excerpt
+        widget: text
+      - label: Author
+        name: author
+        widget: string
+        default: Vinit Chakwal
+      - label: Read Time
+        name: read_time
+        widget: string
+        default: 5 min read
+      - label: Article Body
+        name: body
+        widget: markdown
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+      - label: Publish Date
+        name: date
+        widget: datetime
 
-  - name: "settings"
-    label: "Site Settings"
+  - name: settings
+    label: Site Settings
     files:
-      - label: "Contact Details"
-        name: "contact"
-        file: "_data/contact.json"
+      - label: Contact Details
+        name: contact
+        file: _data/contact.json
         fields:
-          - {label: "Phone", name: "phone", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Address Line 1", name: "address1", widget: "string"}
-          - {label: "Address Line 2", name: "address2", widget: "string"}
-          - {label: "WhatsApp Number", name: "whatsapp", widget: "string"}
+          - label: Phone
+            name: phone
+            widget: string
+          - label: Email
+            name: email
+            widget: string
+          - label: Address Line 1
+            name: address1
+            widget: string
+          - label: Address Line 2
+            name: address2
+            widget: string
+          - label: WhatsApp Number
+            name: whatsapp
+            widget: string
