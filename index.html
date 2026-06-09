@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhidheya Advisors LLP — Strategy & Management Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #708c7e;
+  --green-dark: #4a6358;
+  --green-deeper: #2e4a3e;
+  --green-light: #e8eeeb;
+  --green-mid: #5a7268;
+  --parchment: #eae6da;
+  --parchment-dark: #d8d3c4;
+  --terracotta: #b65945;
+  --terracotta-dark: #9a4a39;
+  --charcoal: #2c2a26;
+  --charcoal-mid: #3d3b37;
+  --charcoal-light: #6b6865;
+  --faint: #e8e5de;
+  --white: #ffffff;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--white);
+  color: var(--charcoal);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 70px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--faint);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 4rem;
+  z-index: 200;
+}
+.nav-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-decoration: none; }
+.nav-logo-mark { display: flex; align-items: stretch; height: 28px; }
+.nav-logo-abhi {
+  background: var(--green);
+  color: var(--parchment);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  font-weight: 400;
+  padding: 0 0.7rem;
+  display: flex; align-items: center;
+}
+.nav-logo-dheya {
+  background: var(--parchment);
+  color: var(--green);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  font-weight: 400;
+  padding: 0 0.7rem;
+  display: flex; align-items: center;
+  border: 1px solid var(--parchment-dark);
+  border-left: none;
+}
+.nav-logo-sub {
+  display: flex; align-items: center;
+}
+.nav-logo-advisors {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--charcoal-light);
+  font-weight: 400;
+}
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-mid);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--terracotta);
+  color: var(--white);
+  padding: 0.5rem 1.4rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--terracotta-dark); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: var(--green-deeper);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 8rem 4rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 45%;
+  height: 100%;
+  background: var(--green-dark);
+  opacity: 0.4;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: rgba(234,230,218,0.15);
+}
+.hero-decor-circle {
+  position: absolute;
+  bottom: -120px; right: -120px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  border: 1px solid rgba(234,230,218,0.08);
+}
+.hero-decor-circle2 {
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(234,230,218,0.06);
+}
+.hero-left { position: relative; z-index: 2; padding-right: 3rem; }
+.hero-eyebrow {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px; height: 1px;
+  background: var(--terracotta);
+}
+.hero-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 400;
+  color: var(--parchment);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--white);
+}
+.hero-body {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(234,230,218,0.75);
+  line-height: 1.9;
+  max-width: 480px;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+.hero-actions { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+.btn-primary {
+  font-family: 'Lato', sans-serif;
+  background: var(--terracotta);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--terracotta-dark); }
+.btn-ghost {
+  font-family: 'Lato', sans-serif;
+  color: rgba(234,230,218,0.7);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: color 0.2s;
+  border-bottom: 1px solid rgba(234,230,218,0.25);
+  padding-bottom: 2px;
+}
+.btn-ghost:hover { color: var(--parchment); border-bottom-color: rgba(234,230,218,0.6); }
+.hero-right {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; gap: 1px;
+}
+.hero-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(234,230,218,0.1);
+  border: 1px solid rgba(234,230,218,0.1);
+}
+.hero-stat {
+  background: rgba(46,74,62,0.6);
+  padding: 1.75rem;
+}
+.hero-stat-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--parchment);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.hero-stat-num span { color: var(--terracotta); font-size: 1.5rem; }
+.hero-stat-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(234,230,218,0.45);
+  font-weight: 400;
+}
+.hero-image-placeholder {
+  background: rgba(234,230,218,0.05);
+  border: 1px solid rgba(234,230,218,0.1);
+  border-top: none;
+  height: 180px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(234,230,218,0.2);
+}
+
+/* ── TAGLINE BAND ── */
+.tagline-band {
+  background: var(--white);
+  padding: 5rem 4rem;
+  border-bottom: 1px solid var(--faint);
+  text-align: center;
+}
+.tagline-band-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.tagline-band-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.tagline-band-text em {
+  font-style: italic;
+  color: var(--green);
+}
+.tagline-band-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.tagline-band-rule::before,
+.tagline-band-rule::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: var(--terracotta);
+}
+.tagline-band-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--terracotta);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+/* ── TRUSTED BY ── */
+.trusted {
+  background: var(--parchment);
+  padding: 2.5rem 4rem;
+  border-bottom: 1px solid var(--parchment-dark);
+}
+.trusted-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;
+}
+.trusted-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--charcoal-light);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.trusted-divider {
+  width: 1px; height: 24px;
+  background: var(--parchment-dark);
+  flex-shrink: 0;
+}
+.trusted-clients { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+.trusted-client {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.85rem;
+  color: var(--charcoal-mid);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/* ── WHO WE WORK WITH ── */
+.who {
+  padding: 7rem 4rem;
+  background: var(--white);
+}
+.who-inner { max-width: 1100px; margin: 0 auto; }
+.section-eyebrow {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.section-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--terracotta);
+}
+.section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  max-width: 560px;
+}
+.section-title em { font-style: italic; color: var(--green); }
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--faint);
+  border: 1px solid var(--faint);
+}
+.who-card {
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: background 0.2s;
+  cursor: default;
+}
+.who-card:hover { background: var(--green-light); }
+.who-icon {
+  width: 44px; height: 44px;
+  background: var(--green-light);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.who-icon svg { width: 20px; height: 20px; stroke: var(--green-mid); fill: none; stroke-width: 1.5; }
+.who-card:hover .who-icon { background: var(--white); }
+.who-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.88rem;
+  color: var(--charcoal);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.who-desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  color: var(--charcoal-light);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ── SERVICES ── */
+.services {
+  padding: 7rem 4rem;
+  background: var(--parchment);
+}
+.services-inner { max-width: 1100px; margin: 0 auto; }
+.services-header {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: end; margin-bottom: 4rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--parchment-dark);
+  border-top: 2px solid var(--green);
+}
+.service-tile {
+  background: var(--parchment);
+  padding: 1.75rem 1.5rem;
+  transition: background 0.2s;
+  cursor: default;
+  position: relative;
+}
+.service-tile:hover { background: var(--white); }
+.service-tile:hover .service-num { color: var(--terracotta); }
+.service-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.7rem;
+  color: var(--charcoal-light);
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+.service-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+.service-line {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  color: var(--charcoal-light);
+  line-height: 1.7;
+  font-weight: 400;
+}
+.services-cta {
+  margin-top: 2.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.link-arrow {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  text-decoration: none;
+  font-weight: 700;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: color 0.2s;
+  border-bottom: 1px solid var(--green-light);
+  padding-bottom: 2px;
+}
+.link-arrow:hover { color: var(--green-dark); border-bottom-color: var(--green-mid); }
+.link-arrow::after { content: '→'; transition: transform 0.2s; }
+.link-arrow:hover::after { transform: translateX(4px); }
+
+/* ── SELECTED WORK ── */
+.work {
+  padding: 7rem 4rem;
+  background: var(--white);
+}
+.work-inner { max-width: 1100px; margin: 0 auto; }
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--faint);
+  margin-top: 3rem;
+  border: 1px solid var(--faint);
+}
+.work-card {
+  background: var(--white);
+  padding: 2.5rem;
+  transition: background 0.2s;
+  cursor: default;
+  display: flex; flex-direction: column;
+}
+.work-card:hover { background: #fafaf8; }
+.work-card.work-featured {
+  grid-column: span 2;
+  background: var(--green-deeper);
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+}
+.work-card.work-featured:hover { background: var(--green-dark); }
+.work-featured-left { flex: 1; }
+.work-featured-image {
+  width: 280px; height: 200px;
+  background: rgba(234,230,218,0.08);
+  border: 1px solid rgba(234,230,218,0.12);
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.62rem; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(234,230,218,0.2);
+  font-family: 'Lato', sans-serif;
+}
+.work-service {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.work-featured .work-service { color: rgba(182,89,69,0.8); }
+.work-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+.work-featured .work-title {
+  font-size: 1.6rem;
+  color: var(--parchment);
+}
+.work-desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: var(--charcoal-mid);
+  line-height: 1.8;
+  font-weight: 400;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+.work-featured .work-desc { color: rgba(234,230,218,0.65); font-weight: 300; }
+.work-meta {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  color: var(--charcoal-light);
+  letter-spacing: 0.05em;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--faint);
+  font-weight: 400;
+}
+.work-featured .work-meta {
+  color: rgba(234,230,218,0.3);
+  border-top-color: rgba(234,230,218,0.1);
+}
+.work-meta strong { color: var(--charcoal-mid); font-weight: 700; }
+.work-featured .work-meta strong { color: rgba(234,230,218,0.55); }
+.work-image-placeholder {
+  width: 100%; height: 160px;
+  background: var(--green-light);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.62rem; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--charcoal-light);
+  font-family: 'Lato', sans-serif;
+}
+
+/* ── ABOUT SNAPSHOT ── */
+.about-snap {
+  padding: 7rem 4rem;
+  background: var(--parchment);
+  display: grid;
+}
+.about-snap-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: center;
+}
+.about-body {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.92rem;
+  color: var(--charcoal-mid);
+  line-height: 1.95;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.about-pull {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--charcoal);
+  line-height: 1.6;
+  border-left: 2px solid var(--green);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-weight: 400;
+}
+.about-right {
+  background: var(--green-deeper);
+  padding: 3rem;
+  position: relative;
+}
+.about-right::before {
+  content: '';
+  position: absolute;
+  top: 12px; left: 12px; right: -12px; bottom: -12px;
+  border: 1px solid var(--parchment-dark);
+  z-index: -1;
+}
+.about-detail {
+  display: flex; justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(234,230,218,0.1);
+}
+.about-detail:last-child { border-bottom: none; }
+.about-detail-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(234,230,218,0.35);
+  font-weight: 700;
+}
+.about-detail-value {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  color: var(--parchment);
+  font-weight: 400;
+  text-align: right;
+  max-width: 60%;
+  line-height: 1.5;
+}
+
+/* ── INSIGHTS ── */
+.insights {
+  padding: 7rem 4rem;
+  background: var(--white);
+}
+.insights-inner { max-width: 1100px; margin: 0 auto; }
+.insights-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--faint);
+  border: 1px solid var(--faint);
+  margin-top: 3rem;
+}
+.insight-featured {
+  background: var(--parchment);
+  padding: 3rem;
+  border-right: none;
+}
+.insight-card {
+  background: var(--white);
+  padding: 3rem;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.insight-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 700;
+}
+.insight-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.35;
+  margin: 0.5rem 0;
+}
+.insight-excerpt {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: var(--charcoal-mid);
+  line-height: 1.85;
+  font-weight: 400;
+}
+.insight-coming {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--charcoal-light);
+  line-height: 1.6;
+}
+.insight-meta {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.68rem;
+  color: var(--charcoal-light);
+  letter-spacing: 0.05em;
+  margin-top: auto;
+}
+
+/* ── CTA STRIP ── */
+.cta-strip {
+  background: var(--green-deeper);
+  padding: 6rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-strip::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(234,230,218,0.06);
+}
+.cta-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+.cta-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--parchment);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.cta-title em { font-style: italic; color: var(--white); }
+.cta-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(234,230,218,0.6);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+.cta-actions { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.cta-contact {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(234,230,218,0.4);
+  font-weight: 400;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--charcoal);
+  padding: 3rem 4rem;
+}
+.footer-top {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  max-width: 1100px; margin: 0 auto;
+}
+.footer-brand {}
+.footer-logo-mark { display: flex; height: 24px; margin-bottom: 0.5rem; }
+.footer-logo-abhi {
+  background: var(--green);
+  color: var(--parchment);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  padding: 0 0.6rem;
+  display: flex; align-items: center;
+}
+.footer-logo-dheya {
+  background: var(--parchment);
+  color: var(--green);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  padding: 0 0.6rem;
+  display: flex; align-items: center;
+}
+.footer-advisors {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 0.35rem;
+}
+.footer-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+.footer-address {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.footer-col-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 400;
+}
+.footer-links a:hover { color: var(--white); }
+.footer-contact-item {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+}
+.footer-bottom {
+  max-width: 1100px; margin: 2rem auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.2);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 5rem; }
+  .hero::before { display: none; }
+  .hero-right { display: none; }
+  .trusted { padding: 2rem 1.5rem; }
+  .who, .services, .work, .about-snap, .insights { padding: 5rem 1.5rem; }
+  .who-grid { grid-template-columns: repeat(3, 1fr); }
+  .services-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-card.work-featured { grid-column: span 1; flex-direction: column; }
+  .work-featured-image { width: 100%; }
+  .about-snap-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .insights-grid { grid-template-columns: 1fr; }
+  .cta-strip { padding: 5rem 1.5rem; }
+  footer { padding: 2.5rem 1.5rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo-wrap">
+    <div class="nav-logo-mark">
+      <div class="nav-logo-abhi">ABHI</div>
+      <div class="nav-logo-dheya">DHEYA</div>
+    </div>
+    <div class="nav-logo-sub">
+      <span class="nav-logo-advisors">Abhidheya Advisors LLP</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Engage Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-decor-circle"></div>
+  <div class="hero-decor-circle2"></div>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Abhidheya Advisors LLP · Dehradun, Uttarakhand</p>
+    <h1 class="hero-title">Strategy &amp; Management<br>Consulting <em>Rooted</em><br>in the Himalayas</h1>
+    <p class="hero-body">We partner with governments, organisations, NGOs, MSMEs, and corporates to translate complex policy into accountable, on-ground impact — delivering strategy, digital transformation, and creative communications across Uttarakhand and beyond.</p>
+    <div class="hero-actions">
+      <a href="projects.html" class="btn-primary">View Our Work</a>
+      <a href="services.html" class="btn-ghost">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat-grid">
+      <div class="hero-stat">
+        <div class="hero-stat-num">8<span>+</span></div>
+        <div class="hero-stat-label">Projects Delivered</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">7</div>
+        <div class="hero-stat-label">Practice Areas</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Major Clients</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">Sectors Served</div>
+      </div>
+    </div>
+    <div class="hero-image-placeholder">Image placeholder — add photo</div>
+  </div>
+</section>
+
+<!-- TAGLINE BAND -->
+<div class="tagline-band">
+  <div class="tagline-band-inner">
+    <p class="tagline-band-text">From <em>Vision</em> to <em>Value.</em></p>
+    <div class="tagline-band-rule">
+      <span class="tagline-band-sub">Abhidheya Advisors LLP</span>
+    </div>
+  </div>
+</div>
+
+<!-- TRUSTED BY -->
+<div class="trusted">
+  <div class="trusted-inner">
+    <span class="trusted-label">Trusted by</span>
+    <div class="trusted-divider"></div>
+    <div class="trusted-clients">
+      <span class="trusted-client">Garhwal Mandal Vikas Nigam (GMVN)</span>
+      <div class="trusted-divider"></div>
+      <span class="trusted-client">District Administration Uttarkashi</span>
+      <div class="trusted-divider"></div>
+      <span class="trusted-client">Times of India</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHO WE WORK WITH -->
+<section class="who">
+  <div class="who-inner">
+    <p class="section-eyebrow">Our Clients</p>
+    <h2 class="section-title">Who we <em>work with</em></h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg>
+        </div>
+        <div class="who-name">Government</div>
+        <div class="who-desc">State departments, district administrations, and central missions</div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="who-name">Organisations</div>
+        <div class="who-desc">Development agencies, think tanks, and institutional bodies</div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="who-name">NGOs</div>
+        <div class="who-desc">Non-profits, civil society organisations, and social enterprises</div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div class="who-name">MSMEs</div>
+        <div class="who-desc">Small and medium enterprises in tourism, hospitality, and services</div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="who-name">Corporates</div>
+        <div class="who-desc">Private sector companies and CSR programme leads</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <div>
+        <p class="section-eyebrow">What We Do</p>
+        <h2 class="section-title">Seven practice areas.<br><em>One integrated approach.</em></h2>
+      </div>
+      <div>
+        <p style="font-family:'Lato',sans-serif;font-size:0.88rem;color:var(--charcoal-mid);line-height:1.9;font-weight:400;">From policy design to digital transformation — our services span the full consulting cycle, working across government, development, and corporate sectors.</p>
+        <div class="services-cta">
+          <a href="services.html" class="link-arrow">Explore all services</a>
+        </div>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-tile">
+        <div class="service-num">01</div>
+        <div class="service-name">Policy, Strategy &amp; Programme Advisory</div>
+        <div class="service-line">Governance frameworks and programme roadmaps for governments and development agencies</div>
+      </div>
+      <div class="service-tile">
+        <div class="service-num">02</div>
+        <div class="service-name">Programme Management &amp; Technical Support</div>
+        <div class="service-line">Embedded PMU and TSU engagements for outcome-focused governance</div>
+      </div>
+      <div class="service-tile">
+        <div class="service-num">03</div>
+        <div class="service-name">Funding Strategy &amp; Proposal Design</div>
+        <div class="service-line">CSR proposals, DPRs, and development funding documents that get funded</div>
+      </div>
+      <div class="service-tile">
+        <div class="service-num">04</div>
+        <div class="service-name">Research, Monitoring &amp; Evaluation</div>
+        <div class="service-line">Evidence frameworks, impact assessments, and white papers for policy accountability</div>
+      </div>
+      <div class="service-tile">
+        <div class="service-num">05</div>
+        <div class="service-name">Digital Governance &amp; Transformation</div>
+        <div class="service-line">MIS, citizen platforms, AI capacity building, and digital roadmaps</div>
+      </div>
+      <div class="service-tile">
+        <div class="service-num">06</div>
+        <div class="service-name">Strategic Communications, Branding &amp; Marketing</div>
+        <div class="service-line">Campaign management, institutional branding, and social media</div>
+      </div>
+      <div class="service-tile">
+        <div class="service-num">07</div>
+        <div class="service-name">Business Growth &amp; Enterprise Management</div>
+        <div class="service-line">Revenue strategy, OTA integration, and operational transformation</div>
+      </div>
+      <div class="service-tile" style="background:var(--green-deeper);cursor:pointer;" onclick="window.location='services.html'">
+        <div style="height:100%;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--parchment);font-weight:400;margin-bottom:0.75rem;font-style:italic;">See all services in detail</div>
+          <a href="services.html" class="link-arrow" style="color:var(--terracotta);border-bottom-color:rgba(182,89,69,0.3);">View Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section class="work">
+  <div class="work-inner">
+    <p class="section-eyebrow">Selected Work</p>
+    <h2 class="section-title">Projects built on trust,<br><em>delivered on ground.</em></h2>
+    <div class="work-grid">
+
+      <div class="work-card work-featured">
+        <div class="work-featured-left">
+          <div class="work-service">Policy · Programme Management · Digital · Communications</div>
+          <h3 class="work-title">Technical Support Unit — Office of DM Uttarkashi</h3>
+          <p class="work-desc">An active, embedded Technical Support Unit within the Office of the District Magistrate, Uttarkashi — providing cross-functional advisory across governance reform, institutional design, digital transformation, and public communications.</p>
+          <div class="work-meta"><strong>District Administration Uttarkashi</strong> · Govt. of Uttarakhand · GeM Contract · Active</div>
+        </div>
+        <div class="work-featured-image">Add project image</div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image-placeholder">Add project image</div>
+        <div class="work-service">Business Growth &amp; Enterprise Management</div>
+        <h3 class="work-title">GMVN — Business Transformation</h3>
+        <p class="work-desc">A comprehensive business transformation engagement for Uttarakhand's premier state tourism corporation — OTA integration, channel management, strategic partnerships, and new tourism product development.</p>
+        <div class="work-meta"><strong>GMVN</strong> · Garhwal Mandal Vikas Nigam</div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image-placeholder">Add project image</div>
+        <div class="work-service">Strategic Communications &amp; Marketing</div>
+        <h3 class="work-title">Times of India — Event Marketing, Uttarakhand</h3>
+        <p class="work-desc">Social media management and digital marketing for three Times of India events — International Yoga Festival 2025, Times Expo Haridwar 2025, and Future Pathways Expo Dehradun 2026.</p>
+        <div class="work-meta"><strong>Times of India</strong> · Dehradun · Commercial Contract</div>
+      </div>
+
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="projects.html" class="link-arrow">View all projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SNAPSHOT -->
+<section class="about-snap">
+  <div class="about-snap-inner">
+    <div>
+      <p class="section-eyebrow">About the Firm</p>
+      <h2 class="section-title">A boutique consultancy built for the complexity of <em>mountain governance.</em></h2>
+      <p class="about-body">Abhidheya Advisors LLP is a multi-sectoral consulting firm based in Uttarakhand, working at the intersection of policy, people, and technology. We deliver strategic consulting, digital transformation, institutional capacity building, and creative communications to make systems work better for the people they serve.</p>
+      <blockquote class="about-pull">"We don't just consult — we co-create and deliver."</blockquote>
+      <a href="about.html" class="link-arrow">Learn about the firm</a>
+    </div>
+    <div class="about-right">
+      <div class="about-detail">
+        <span class="about-detail-label">Founded</span>
+        <span class="about-detail-value">2025, Dehradun</span>
+      </div>
+      <div class="about-detail">
+        <span class="about-detail-label">Structure</span>
+        <span class="about-detail-value">Limited Liability Partnership</span>
+      </div>
+      <div class="about-detail">
+        <span class="about-detail-label">Focus Region</span>
+        <span class="about-detail-value">Uttarakhand &amp; North India</span>
+      </div>
+      <div class="about-detail">
+        <span class="about-detail-label">Active Sectors</span>
+        <span class="about-detail-value">Governance, Tourism, Education, Digital, Social Sector</span>
+      </div>
+      <div class="about-detail">
+        <span class="about-detail-label">Embedded TSU</span>
+        <span class="about-detail-value">Office of DM Uttarkashi, Uttarakhand</span>
+      </div>
+      <div class="about-detail">
+        <span class="about-detail-label">Procurement</span>
+        <span class="about-detail-value">GeM Registered Vendor</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="insights">
+  <div class="insights-inner">
+    <p class="section-eyebrow">From Our Insights</p>
+    <h2 class="section-title">Thinking that <em>shapes our practice.</em></h2>
+    <div class="insights-grid">
+      <div class="insight-featured">
+        <span class="insight-tag">Ecology · Governance</span>
+        <h3 class="insight-title">A Framework for Community-Led Forest Fire Prevention in Uttarakhand</h3>
+        <p class="insight-excerpt">Every summer, Uttarakhand loses thousands of hectares of forest to fires — most of them preventable. This piece outlines a ground-up prevention framework built on community mobilisation, early warning systems, and institutional accountability.</p>
+        <p class="insight-meta" style="margin-top:1.5rem;">Abhidheya Advisors · Coming Soon</p>
+      </div>
+      <div class="insight-card">
+        <span class="insight-tag">Education · Governance</span>
+        <h3 class="insight-title" style="font-size:1rem;">The Bagless Saturday Model — Reimagining School Engagement in Hill Districts</h3>
+        <p class="insight-coming">Brief pending — article coming soon.</p>
+        <a href="insights.html" class="link-arrow" style="margin-top:1rem;">View all insights</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="cta-inner">
+    <h2 class="cta-title">Let's work on something <em>that matters.</em></h2>
+    <p class="cta-sub">Government department, development organisation, NGO, MSME, or corporate — we'd welcome a conversation about how we might help.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Get In Touch</a>
+      <span class="cta-contact">contact@abhidheyaadvisors.com &nbsp;·&nbsp; +91 8791096159</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo-mark">
+        <div class="footer-logo-abhi">ABHI</div>
+        <div class="footer-logo-dheya">DHEYA</div>
+      </div>
+      <div class="footer-advisors">Abhidheya Advisors LLP</div>
+      <div class="footer-tagline">From Vision to Value</div>
+      <div class="footer-address">
+        Chakwal Tower, Lal Bahadur Shastri Marg<br>
+        Majra, Dehradun, Uttarakhand<br>
+        +91 8791096159<br>
+        contact@abhidheyaadvisors.com
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <div class="footer-links">
+        <a href="services.html">Policy &amp; Strategy Advisory</a>
+        <a href="services.html">Programme Management</a>
+        <a href="services.html">Funding &amp; Proposals</a>
+        <a href="services.html">Research &amp; M&amp;E</a>
+        <a href="services.html">Digital Governance</a>
+        <a href="services.html">Communications &amp; Branding</a>
+        <a href="services.html">Business Growth</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Abhidheya Advisors LLP. All rights reserved.</span>
+    <span>www.abhidheyaadvisors.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

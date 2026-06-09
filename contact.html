@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Abhidheya Advisors LLP</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#708c7e;--green-dark:#4a6358;--green-deeper:#2e4a3e;
+  --green-light:#e8eeeb;--green-mid:#5a7268;
+  --parchment:#eae6da;--parchment-dark:#d8d3c4;
+  --terracotta:#b65945;--terracotta-dark:#9a4a39;
+  --charcoal:#2c2a26;--charcoal-mid:#3d3b37;--charcoal-light:#6b6865;
+  --faint:#e8e5de;--white:#ffffff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;background:var(--white);color:var(--charcoal);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;height:70px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--faint);display:flex;align-items:center;justify-content:space-between;padding:0 4rem;z-index:200}
+.nav-logo-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-decoration:none}
+.nav-logo-mark{display:flex;align-items:stretch;height:28px}
+.nav-logo-abhi{background:var(--green);color:var(--parchment);font-family:'Libre Baskerville',serif;font-size:0.72rem;letter-spacing:0.22em;font-weight:400;padding:0 0.7rem;display:flex;align-items:center}
+.nav-logo-dheya{background:var(--parchment);color:var(--green);font-family:'Libre Baskerville',serif;font-size:0.72rem;letter-spacing:0.22em;font-weight:400;padding:0 0.7rem;display:flex;align-items:center;border:1px solid var(--parchment-dark);border-left:none}
+.nav-logo-advisors{font-family:'Lato',sans-serif;font-size:0.5rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--charcoal-light);font-weight:400}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-family:'Lato',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--charcoal-mid);text-decoration:none;font-weight:400;transition:color 0.2s}
+.nav-links a:hover{color:var(--charcoal)}
+.nav-links a.active{color:var(--charcoal);border-bottom:1.5px solid var(--terracotta);padding-bottom:2px}
+.nav-cta{font-family:'Lato',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--terracotta);color:var(--white);padding:0.5rem 1.4rem;text-decoration:none;font-weight:700;transition:background 0.2s}
+.nav-cta:hover{background:var(--terracotta-dark)}
+
+/* PAGE HEADER */
+.page-header{padding:9rem 4rem 6rem;background:var(--green-deeper);position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;bottom:-120px;right:-120px;width:460px;height:460px;border-radius:50%;border:1px solid rgba(234,230,218,0.07)}
+.page-header-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.page-eyebrow{font-family:'Lato',sans-serif;font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:1.25rem;font-weight:700;display:flex;align-items:center;gap:0.75rem}
+.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--terracotta)}
+.page-title{font-family:'Libre Baskerville',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:400;color:var(--parchment);line-height:1.1;margin-bottom:1.25rem}
+.page-title em{font-style:italic;color:var(--white)}
+.page-subtitle{font-family:'Playfair Display',serif;font-size:1rem;color:rgba(234,230,218,0.6);line-height:1.85;font-weight:400;max-width:520px}
+
+/* MAIN CONTACT SECTION */
+.contact-main{padding:7rem 4rem;background:var(--white)}
+.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+
+/* LEFT — DETAILS */
+.contact-details{}
+.detail-group{margin-bottom:2.5rem}
+.detail-label{font-family:'Lato',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.6rem}
+.detail-label::before{content:'';display:block;width:18px;height:1px;background:var(--terracotta)}
+.detail-value{font-family:'Lato',sans-serif;font-size:0.95rem;color:var(--charcoal);line-height:1.75;font-weight:400}
+.detail-value a{color:var(--charcoal);text-decoration:none;transition:color 0.2s}
+.detail-value a:hover{color:var(--terracotta)}
+
+.gem-note{background:var(--parchment);border-left:2px solid var(--green);padding:1.25rem 1.5rem;margin-top:2.5rem}
+.gem-note-label{font-family:'Lato',sans-serif;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-mid);font-weight:700;margin-bottom:0.4rem}
+.gem-note-text{font-family:'Lato',sans-serif;font-size:0.82rem;color:var(--charcoal-mid);line-height:1.7;font-weight:400}
+
+.whatsapp-btn{display:inline-flex;align-items:center;gap:0.75rem;background:var(--green-deeper);color:var(--parchment);padding:0.85rem 1.5rem;text-decoration:none;font-family:'Lato',sans-serif;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;transition:background 0.2s;margin-top:2rem}
+.whatsapp-btn:hover{background:var(--green-dark)}
+.whatsapp-btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+
+/* RIGHT — FORM */
+.contact-form{}
+.form-intro{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--charcoal-mid);line-height:1.75;font-style:italic;font-weight:400;margin-bottom:2.5rem}
+.form-row{margin-bottom:1.75rem}
+.form-row label{display:block;font-family:'Lato',sans-serif;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal-light);font-weight:700;margin-bottom:0.6rem}
+.form-row input,
+.form-row textarea,
+.form-row select{width:100%;background:transparent;border:none;border-bottom:1px solid var(--faint);padding:0.65rem 0;font-size:0.9rem;color:var(--charcoal);font-family:'Lato',sans-serif;font-weight:400;outline:none;transition:border-color 0.2s;-webkit-appearance:none;border-radius:0}
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus{border-bottom-color:var(--green)}
+.form-row textarea{resize:none;height:100px;line-height:1.7}
+.form-row select{cursor:pointer;color:var(--charcoal)}
+.form-row select option{color:var(--charcoal)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.btn-submit{width:100%;background:var(--terracotta);color:var(--white);border:none;padding:1rem 2rem;font-family:'Lato',sans-serif;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
+.btn-submit:hover{background:var(--terracotta-dark)}
+.form-note{font-family:'Lato',sans-serif;font-size:0.72rem;color:var(--charcoal-light);margin-top:1rem;line-height:1.6;font-weight:400}
+
+/* MAP STRIP */
+.map-strip{background:var(--parchment);padding:5rem 4rem;border-top:1px solid var(--parchment-dark)}
+.map-strip-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.map-placeholder{background:var(--white);border:1px solid var(--parchment-dark);height:280px;display:flex;align-items:center;justify-content:center;font-family:'Lato',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--charcoal-light);position:relative}
+.map-placeholder::after{content:'';position:absolute;bottom:-8px;right:-8px;left:8px;top:8px;border:1px solid var(--parchment-dark);z-index:-1}
+.map-address-block{}
+.map-address-eyebrow{font-family:'Lato',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.map-address-eyebrow::before{content:'';display:block;width:18px;height:1px;background:var(--terracotta)}
+.map-address-name{font-family:'Libre Baskerville',serif;font-size:1.2rem;font-weight:400;color:var(--charcoal);margin-bottom:0.75rem}
+.map-address-text{font-family:'Lato',sans-serif;font-size:0.88rem;color:var(--charcoal-mid);line-height:2;font-weight:400}
+.map-directions{display:inline-flex;align-items:center;gap:0.5rem;font-family:'Lato',sans-serif;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--green-mid);text-decoration:none;font-weight:700;margin-top:1.5rem;border-bottom:1px solid var(--green-light);padding-bottom:2px;transition:color 0.2s}
+.map-directions:hover{color:var(--green-dark)}
+.map-directions::after{content:'→'}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:3rem 4rem}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.08);max-width:1100px;margin:0 auto}
+.footer-logo-mark{display:flex;height:24px;margin-bottom:0.5rem}
+.footer-logo-abhi{background:var(--green);color:var(--parchment);font-family:'Libre Baskerville',serif;font-size:0.62rem;letter-spacing:0.2em;padding:0 0.6rem;display:flex;align-items:center}
+.footer-logo-dheya{background:var(--parchment);color:var(--green);font-family:'Libre Baskerville',serif;font-size:0.62rem;letter-spacing:0.2em;padding:0 0.6rem;display:flex;align-items:center}
+.footer-advisors{font-family:'Lato',sans-serif;font-size:0.52rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.35rem}
+.footer-tagline{font-family:'Playfair Display',serif;font-size:0.72rem;font-style:italic;color:var(--terracotta);margin-bottom:1rem}
+.footer-address{font-family:'Lato',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);line-height:1.8;font-weight:300}
+.footer-col-title{font-family:'Lato',sans-serif;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:1rem;font-weight:700}
+.footer-links{display:flex;flex-direction:column;gap:0.6rem}
+.footer-links a{font-family:'Lato',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s;font-weight:400}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;display:flex;align-items:center;justify-content:space-between;font-family:'Lato',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.2)}
+
+@media(max-width:900px){
+  nav{padding:0 1.5rem}
+  .nav-links{display:none}
+  .page-header{padding:8rem 1.5rem 4rem}
+  .contact-main{padding:5rem 1.5rem}
+  .contact-inner{grid-template-columns:1fr;gap:4rem}
+  .form-grid{grid-template-columns:1fr}
+  .map-strip{padding:4rem 1.5rem}
+  .map-strip-inner{grid-template-columns:1fr;gap:3rem}
+  footer{padding:2.5rem 1.5rem}
+  .footer-top{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo-wrap">
+    <div class="nav-logo-mark">
+      <div class="nav-logo-abhi">ABHI</div>
+      <div class="nav-logo-dheya">DHEYA</div>
+    </div>
+    <span class="nav-logo-advisors">Abhidheya Advisors LLP</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Engage Us</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Get In Touch</p>
+    <h1 class="page-title">Let's work on something<br><em>that matters.</em></h1>
+    <p class="page-subtitle">Government department, development organisation, NGO, MSME, or corporate — we'd welcome a conversation about how we might help.</p>
+  </div>
+</header>
+
+<!-- MAIN CONTACT -->
+<section class="contact-main">
+  <div class="contact-inner">
+
+    <!-- LEFT -->
+    <div class="contact-details">
+
+      <div class="detail-group">
+        <div class="detail-label">Email</div>
+        <div class="detail-value"><a href="mailto:contact@abhidheyaadvisors.com">contact@abhidheyaadvisors.com</a></div>
+      </div>
+
+      <div class="detail-group">
+        <div class="detail-label">Phone</div>
+        <div class="detail-value"><a href="tel:+918791096159">+91 8791096159</a></div>
+      </div>
+
+      <div class="detail-group">
+        <div class="detail-label">Office</div>
+        <div class="detail-value">
+          Abhidheya Advisors LLP<br>
+          Chakwal Tower, Lal Bahadur Shastri Marg<br>
+          Majra, Dehradun<br>
+          Uttarakhand — 248171
+        </div>
+      </div>
+
+      <div class="detail-group">
+        <div class="detail-label">Website</div>
+        <div class="detail-value"><a href="https://www.abhidheyaadvisors.com" target="_blank">www.abhidheyaadvisors.com</a></div>
+      </div>
+
+      <div class="gem-note">
+        <div class="gem-note-label">Government Procurement</div>
+        <div class="gem-note-text">Abhidheya Advisors LLP is a registered vendor on the Government e-Marketplace (GeM). Government departments and public sector bodies can engage us directly through the GeM portal for eligible service categories.</div>
+      </div>
+
+      <a href="https://wa.me/918791096159" target="_blank" class="whatsapp-btn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+    <!-- RIGHT — FORM -->
+    <div class="contact-form">
+      <p class="form-intro">Tell us about your requirement and we'll get back to you within one working day.</p>
+      <div class="form-grid">
+        <div class="form-row">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full name">
+        </div>
+        <div class="form-row">
+          <label>Organisation</label>
+          <input type="text" placeholder="Department / firm / NGO">
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+      <div class="form-row">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-row">
+        <label>Service Area</label>
+        <select>
+          <option value="" disabled selected>Select a service area</option>
+          <option>Policy, Strategy &amp; Programme Advisory</option>
+          <option>Programme Management &amp; Technical Support</option>
+          <option>Funding Strategy &amp; Proposal Design</option>
+          <option>Research, Monitoring &amp; Evaluation</option>
+          <option>Digital Governance &amp; Transformation</option>
+          <option>Strategic Communications, Branding &amp; Marketing</option>
+          <option>Business Growth &amp; Enterprise Management</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Your Message</label>
+        <textarea placeholder="Brief context about your requirement, timeline, or challenge..."></textarea>
+      </div>
+      <button class="btn-submit">Send Enquiry</button>
+      <p class="form-note">We do not share your information with third parties. Government clients may also reach us directly via the GeM portal.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAP STRIP -->
+<div class="map-strip">
+  <div class="map-strip-inner">
+    <div class="map-placeholder">Embed Google Map — Chakwal Tower, Majra, Dehradun</div>
+    <div class="map-address-block">
+      <div class="map-address-eyebrow">Find Us</div>
+      <div class="map-address-name">Abhidheya Advisors LLP</div>
+      <div class="map-address-text">
+        Chakwal Tower<br>
+        Lal Bahadur Shastri Marg, Majra<br>
+        Dehradun, Uttarakhand — 248171<br><br>
+        Monday – Saturday · 9:30 AM – 6:30 PM
+      </div>
+      <a href="https://maps.google.com/?q=Majra,Dehradun,Uttarakhand" target="_blank" class="map-directions">Get Directions</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-mark">
+        <div class="footer-logo-abhi">ABHI</div>
+        <div class="footer-logo-dheya">DHEYA</div>
+      </div>
+      <div class="footer-advisors">Abhidheya Advisors LLP</div>
+      <div class="footer-tagline">From Vision to Value</div>
+      <div class="footer-address">Chakwal Tower, Lal Bahadur Shastri Marg<br>Majra, Dehradun, Uttarakhand<br>+91 8791096159<br>contact@abhidheyaadvisors.com</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <div class="footer-links">
+        <a href="services.html">Policy &amp; Strategy Advisory</a>
+        <a href="services.html">Programme Management</a>
+        <a href="services.html">Funding &amp; Proposals</a>
+        <a href="services.html">Research &amp; M&amp;E</a>
+        <a href="services.html">Digital Governance</a>
+        <a href="services.html">Communications &amp; Branding</a>
+        <a href="services.html">Business Growth</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Abhidheya Advisors LLP. All rights reserved.</span>
+    <span>www.abhidheyaadvisors.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

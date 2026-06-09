@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Abhidheya Advisors LLP</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#708c7e;--green-dark:#4a6358;--green-deeper:#2e4a3e;--green-light:#e8eeeb;--green-mid:#5a7268;--parchment:#eae6da;--parchment-dark:#d8d3c4;--terracotta:#b65945;--terracotta-dark:#9a4a39;--charcoal:#2c2a26;--charcoal-mid:#3d3b37;--charcoal-light:#6b6865;--faint:#e8e5de;--white:#ffffff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',sans-serif;background:var(--green-deeper);color:var(--parchment);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+nav{height:70px;background:rgba(46,74,62,0.6);backdrop-filter:blur(12px);border-bottom:1px solid rgba(234,230,218,0.1);display:flex;align-items:center;justify-content:space-between;padding:0 4rem;flex-shrink:0}
+.nav-logo-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-decoration:none}
+.nav-logo-mark{display:flex;align-items:stretch;height:28px}
+.nav-logo-abhi{background:var(--green);color:var(--parchment);font-family:'Libre Baskerville',serif;font-size:0.72rem;letter-spacing:0.22em;font-weight:400;padding:0 0.7rem;display:flex;align-items:center}
+.nav-logo-dheya{background:var(--parchment);color:var(--green);font-family:'Libre Baskerville',serif;font-size:0.72rem;letter-spacing:0.22em;font-weight:400;padding:0 0.7rem;display:flex;align-items:center;border:1px solid rgba(234,230,218,0.3);border-left:none}
+.nav-logo-advisors{font-family:'Lato',sans-serif;font-size:0.5rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(234,230,218,0.4);font-weight:400}
+.nav-cta{font-family:'Lato',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(234,230,218,0.3);color:var(--parchment);padding:0.5rem 1.4rem;text-decoration:none;font-weight:700;transition:all 0.2s}
+.nav-cta:hover{background:var(--terracotta);border-color:var(--terracotta)}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:4rem;position:relative;overflow:hidden}
+.main::before{content:'404';position:absolute;font-family:'Libre Baskerville',serif;font-size:28vw;font-weight:700;color:rgba(234,230,218,0.03);line-height:1;pointer-events:none;user-select:none;top:50%;left:50%;transform:translate(-50%,-50%)}
+.main::after{content:'';position:absolute;bottom:-120px;right:-120px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(234,230,218,0.05)}
+.content{text-align:center;position:relative;z-index:1;max-width:580px}
+.eyebrow{font-family:'Lato',sans-serif;font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:1.5rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:0.75rem}
+.eyebrow::before,.eyebrow::after{content:'';display:block;width:28px;height:1px;background:var(--terracotta)}
+.title{font-family:'Libre Baskerville',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:400;color:var(--parchment);line-height:1.15;margin-bottom:1.25rem}
+.title em{font-style:italic;color:rgba(234,230,218,0.55)}
+.subtitle{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:rgba(234,230,218,0.5);line-height:1.8;margin-bottom:3rem;font-weight:400}
+.links{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.btn-primary{font-family:'Lato',sans-serif;background:var(--terracotta);color:var(--white);padding:0.8rem 2rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:background 0.2s}
+.btn-primary:hover{background:var(--terracotta-dark)}
+.btn-ghost{font-family:'Lato',sans-serif;color:rgba(234,230,218,0.55);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-weight:400;border-bottom:1px solid rgba(234,230,218,0.2);padding-bottom:2px;transition:all 0.2s}
+.btn-ghost:hover{color:var(--parchment);border-bottom-color:rgba(234,230,218,0.5)}
+.quick-links{display:flex;gap:2rem;margin-top:2.5rem;justify-content:center;flex-wrap:wrap}
+.quick-link{font-family:'Lato',sans-serif;font-size:0.72rem;letter-spacing:0.08em;color:rgba(234,230,218,0.3);text-decoration:none;transition:color 0.2s}
+.quick-link:hover{color:rgba(234,230,218,0.7)}
+footer{background:rgba(0,0,0,0.2);padding:1.5rem 4rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(234,230,218,0.08);flex-shrink:0}
+.footer-copy{font-family:'Lato',sans-serif;font-size:0.68rem;color:rgba(234,230,218,0.2)}
+.footer-tagline{font-family:'Playfair Display',serif;font-size:0.72rem;font-style:italic;color:var(--terracotta);opacity:0.6}
+@media(max-width:600px){nav{padding:0 1.5rem}.main{padding:2rem 1.5rem}footer{padding:1.5rem;flex-direction:column;gap:0.5rem;text-align:center}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo-wrap">
+    <div class="nav-logo-mark">
+      <div class="nav-logo-abhi">ABHI</div>
+      <div class="nav-logo-dheya">DHEYA</div>
+    </div>
+    <span class="nav-logo-advisors">Abhidheya Advisors LLP</span>
+  </a>
+  <a href="contact.html" class="nav-cta">Engage Us</a>
+</nav>
+<main class="main">
+  <div class="content">
+    <p class="eyebrow">404 — Page Not Found</p>
+    <h1 class="title">This path leads<br><em>nowhere we know.</em></h1>
+    <p class="subtitle">The page you're looking for may have moved, been renamed, or never existed. Let's get you back on track.</p>
+    <div class="links">
+      <a href="index.html" class="btn-primary">Go to Homepage</a>
+      <a href="contact.html" class="btn-ghost">Contact Us</a>
+    </div>
+    <div class="quick-links">
+      <a href="about.html" class="quick-link">About</a>
+      <a href="services.html" class="quick-link">Services</a>
+      <a href="projects.html" class="quick-link">Projects</a>
+      <a href="insights.html" class="quick-link">Insights</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <span class="footer-copy">© 2025 Abhidheya Advisors LLP</span>
+  <span class="footer-tagline">From Vision to Value</span>
+</footer>
+</body>
+</html>
